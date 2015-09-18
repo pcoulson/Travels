@@ -1,0 +1,487 @@
+@charset "utf-8";
+
+/* INITIALISE...
+---------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+header, footer, aside, nav, article {  
+	display: block;  
+}  
+
+
+/* GENERAL...
+---------------------------------------------- */
+
+body {
+	background: #999 url("../images/home/passports.jpg") no-repeat top center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	font: 100% "Trebuchet MS", Verdana, sans-serif;
+	-webkit-animation: bugfix infinite 1s; 
+}
+
+@-webkit-keyframes bugfix { 
+	from {padding:0;} 
+	to {padding:0;} 
+}
+
+/* CONTAINERS...
+---------------------------------------------- */
+
+#wrapper {
+	max-width: 960px;
+	width: 96%;
+	margin: 0 auto;
+	overflow-x:hidden;
+	-webkit-box-shadow: 0 0 40px #000;
+	-moz-box-shadow: 0 0 40px #000;
+	-ms-box-shadow: 0 0 40px #000;
+	-o-box-shadow: 0 0 40px #000;
+	box-shadow: 0px 0px 40px #000;
+}
+
+#uConstructPage {
+	background-color: #999;
+	color: #336600;
+	text-align: center;
+	font-size: 1.5em;
+	line-height: 2;
+}
+
+/* HEADER...
+----------------------------------------------
+*/
+
+#header img {
+	width: 100%;
+	display: block;
+} 
+
+
+/* NAVBAR...
+---------------------------------------------- */
+
+input[type=checkbox] {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+
+#wrapper label {
+	border: 1px solid #999999;
+	transition:color .3s ease-in-out;
+	display: none;
+}
+
+nav {
+	width: 100%;
+	position: relative;			/* static causes bottom of list to be hidden below footer */
+	transition-duration: .3s, .5s;
+	transition-timing-function: ease-in-out;
+	transition-property: left, opacity, box-shadow;
+}
+
+#navbar ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#navbar ul li {
+	float: left;
+	width: 16.666667%;
+	font-size: 0.85em;
+}
+
+#navbar ul li a {
+	text-decoration: none;
+	color: #336600;
+	text-transform: uppercase;
+	border: 2px solid #999999;
+	border-bottom: 2px solid #336600;
+	border-left: none;
+	display: block;
+	padding: 0 5px 0 10px;
+	line-height: 2.6em;
+	background: #c7c7c5;
+}
+
+#navbar > ul > li:hover > a {
+	font-weight: bold;
+	background: #99cc99;
+}
+
+/* SUB NAVBARS...
+---------------------------------------------- */
+
+#navbar ul ul {
+	display: none;
+}
+
+#navbar  ul  li ul li {
+	float: left;
+	width: 100%;
+}
+
+#navbar ul li:hover ul {
+	font-weight: normal;
+	display: block;
+	position: absolute;
+	opacity: 0.8;
+	width: 16.6666667%;
+	z-index:5;
+}
+
+#navbar ul li:hover a {
+	font-weight: normal;
+	text-transform: capitalize;
+	border-left: 1px solid #336600;
+	border-right: 1px solid #336600;
+}
+
+#navbar ul li ul li a {
+	font-size: 1.2em;
+}
+
+#navbar ul li:hover li:hover a {
+	opacity:0.9;
+	font-weight: bold;
+	background: #99cccc; 
+}
+
+
+/* HIGHLIGHT CURRENT PAGE...
+---------------------------------------------- */
+
+#navbar a#navBarLink {
+	background: #ccddbb;
+	font-weight: bold;
+}
+
+/* PAGE CONTENT...
+---------------------------------------------- */
+
+.content {
+	transition: margin .3s ease-in-out;
+	width: 100%;
+}
+
+h2 {
+	font-size: 2.5em;
+	font-weight: bold;
+	color: #336600;
+	line-height: 2.0em;
+}
+
+.boxclass {
+	clear: both;
+	display: block;
+	margin: 10px 0 20px 16.66666667%;
+	padding: 5px;
+	border: 2px solid #336600;
+	color: #336600;
+	opacity: 0.6;
+	background-color: #dddddd;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: 10px 10px 20px #111;
+	-moz-box-shadow: 10px 10px 20px #111;
+	-ms-box-shadow: 10px 10px 20px #111;
+	-o-box-shadow: 10px 10px 20px #111;
+	box-shadow: 10px 10px 20px #111;
+}
+
+#text1 {
+	padding: 20px 2.08333333% 20px 2.08333333%;
+	color: #336600;
+	width: 62.5%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#buttonIntro:hover, #buttonMap:hover{
+	background-color: #ccddbb;
+	cursor:pointer;
+	color: #222;
+}
+
+#homePage {
+	clear: both;
+	margin-top: 39px;
+	transition: margin .3s ease-in-out;
+	width: 100%;
+}
+
+.travelMap {
+	text-align: center;
+}
+
+#imgBorder {
+	margin-right: auto;
+	margin-left: auto;
+	width: 66.6666666667%;
+}
+
+.travelMap img {
+	max-width: 93.75%;
+	padding: 3.125%;
+	margin: 30px 1.04166667% 30px 1.04166667%;
+	background: #336600;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	box-shadow: 10px 10px 20px #111;
+}
+
+#justTheTravelMap {
+	display: none;
+}
+
+.gallery section {
+	width: 72.916666667%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.gallery img{
+	background-color: #FFF;
+	width: 18.57142857%;
+	height: auto;
+	padding: 0.57142857%;
+	border: 1px solid #666;
+	margin: 5px 2.1428571% 30px 2.1428571%;
+	position: relative;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px #333;
+	opacity: 0.8;
+}
+
+
+.gallery img:hover {
+	opacity: 1.0;
+}
+
+
+/* FOOTER
+---------------------------------------------- */
+
+#footer {
+	background-color: #c7c7c5;
+}
+
+#footer a {
+	text-decoration: none; 
+	color: #336600;
+	font-size: 0.75em;
+}
+
+#footer img {
+	display: block;
+	width: 100%;
+	border-top: 2px solid #336600;
+	border-bottom: 2px solid #336600;
+}
+
+.alignleft {
+	float:left;
+	margin-left: 1.04166667%;
+}
+
+.alignright {
+	float:right;
+	margin-right: 1.04166667%;
+}
+
+
+/* SMALL SCREENS
+---------------------------------------------- */
+@media handheld, only screen and (max-width: 1000px) {
+
+	#imgBorder {
+		width: 85%;
+	}
+
+	#travelMap {
+		display: none;
+	}
+
+	#justTheTravelMap {
+		display: block;
+	}
+
+	#button1 {
+		display: block;
+		margin-top: 40px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+
+/* SMALLER SCREENS
+---------------------------------------------- */
+
+@media handheld, only screen and (max-width: 760px) {
+
+	body {
+		background: #999;
+	}
+	.gallery img{
+		background-color: #FFF;
+		width: 24.7619048%;
+		height: auto;
+		padding: 0.76190476%;
+		border: 1px solid #666;
+		margin: 5px 2.8571429% 30px 2.8571429%;
+		position: relative;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		-ms-border-radius: 10px;
+		-o-border-radius: 10px;
+		border-radius: 10px;
+		-webkit-box-shadow: 5px 5px 5px #333;
+		-moz-box-shadow: 5px 5px 5px #333;
+		-ms-box-shadow: 5px 5px 5px #333;
+		-o-box-shadow: 5px 5px 5px #333;
+		box-shadow: 5px 5px 5px #333;
+	}
+
+
+}
+
+/* TINY SCREENS (MOBILES ETC.)
+---------------------------------------------- */
+
+@media handheld, only screen and (max-width: 550px) {
+
+	body {
+		overflow-x:hidden;
+	}
+	
+	.flexslider {
+		top: -39px;
+	}
+
+	#photos {
+		background: hsla(40, 21%, 90%, 1);
+	}
+
+	h2 {
+		font-size: 1.5em;
+		line-height: 1.5em;
+	}
+
+	.gallery section {
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.gallery img{
+		width: 23%;
+		opacity: 1.0;
+	}
+
+
+	input:checked ~ nav {
+		left: 2%;
+		width: 160px;
+		opacity:1;
+	}
+
+	input:checked ~ .content {
+		margin-left:160px;
+	}
+
+	input:checked ~ #homePage {
+		margin-left:160px;
+	}
+
+	#wrapper label {
+		color: #336600;
+		border-bottom: 2px solid #336600;
+		border-left: none;
+		display: block;
+		padding: 6px 5px 6px 10px;
+		background: #c7c7c5;
+		width: 100%;
+		z-index:5;
+	}
+	
+	#wrapper label:hover, input:checked ~ label {
+		color:#000;
+	}
+
+	#navbar ul {
+		position: relative;
+		z-index:5;
+	}
+
+	#navbar ul li {
+		float: none;
+		width: 100%;
+	}
+
+	#navbar a {
+		border: 1px solid #999999;
+		border-left: none;
+		display: block;
+		padding: 15px 5px 15px 10px;
+	}
+
+	#navbar ul li:hover ul {
+		background: #c7c7c5;
+		position: relative;
+		opacity: 1.0;
+		width: 100%;		/* 160/960 was 160px */
+	}
+
+	#navbar ul li:hover ul li a {
+		background: #f2f2f2;
+		border: 1px solid #999999;
+		padding-left: 20%;
+		font-size: 1.25em;
+	}
+
+	nav {
+		position:absolute;
+		left:-160px;
+		width: 160px;
+		opacity:1;
+	}
+
+	#text1 {
+		width: 80%;
+	}
+}

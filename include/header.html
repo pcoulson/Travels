@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title><?php echo $pageTitle; ?></title>
+	<meta charset="UTF-8" />
+	<meta name="viewport"  content="width=device-width,initial-scale=1.0" />
+
+	<link rel="icon" type="image/ico" href="favicon.ico" />
+
+    <link type="text/css" rel="stylesheet" href="css/jMyCarousel.css" />
+	<link type="text/css" rel="stylesheet" href="css/lightbox.css" />
+	<link type="text/css" rel="stylesheet" href="css/travels.css" />
+	<link type="text/css" rel="stylesheet" href="css/form.css" />
+	<link type="text/css" rel="stylesheet" href="css/flexslider.css" />
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/jMyCarousel.js"></script>
+	<script type="text/javascript" src="js/lightbox.js"></script>
+	<script type="text/javascript" src="js/form.js"></script>
+	<script type="text/javascript" src="js/toggle.js"></script>
+	<script type="text/javascript" src="js/jquery.flexslider.js"></script>
+
+	<script type="text/javascript">
+		$(function() {
+
+		    $(".jMyCarousel").jMyCarousel({
+		        visible: '100%',
+		        eltByElt: true,
+		        evtStart: 'mousedown',
+		        evtStop: 'mouseup'
+		    });
+		});
+	</script>
+	<script type="text/javascript" charset="utf-8">
+		$(window).load(function() {
+			$('.flexslider').flexslider({
+				animation: "slide",
+				smoothHeight: true,
+				pauseOnHover: true
+			});
+		});
+	</script>
+</head>
+<body>
+
+<div id="wrapper">
+	<header id="header" role="banner">

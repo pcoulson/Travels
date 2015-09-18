@@ -1,0 +1,186 @@
+#shadowing {
+	display: none;
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	z-index: 10;
+	opacity: 0.85;
+	filter: alpha(opacity=85);
+}
+
+#box  {
+	display: none;
+	position: absolute;
+	top: 20%;
+	left: 20%;
+	width: 46.6666666667%;		/* was 448px; */
+	height: auto;
+	background-color: #eefeee;
+	color: #336600;
+	z-index: 101;
+	padding: 48px 2.5% 10px 2.5%;	/* was 48px 24px 10px 24px; */
+	margin: 0;
+	border-top: 10px solid #336600;
+	border-right: 4px solid #336600;
+	border-left: 4px solid #336600;
+	border-bottom: 4px solid #336600;
+	overflow: auto;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#boxtitle {
+	position: absolute;
+	font-size: 1.2em;
+	float: center;
+	top: 0;
+	left: 0;
+	width: 100%;		/* was 496px; */
+	height: 30px;
+	padding: 0;
+	padding-top: 4px;
+	left-padding: 8px;
+	margin: 0;
+	background-color: #336600;
+	color: white;
+	text-align: center;
+}
+
+#emailForm {
+	padding: 5px 0 5px 0;
+	font-size: 0.8em;
+}
+
+#emailForm fieldset {
+	margin-bottom:10px;
+	padding-bottom: 10px;
+	border-width:2px;
+	border-style:solid;
+	border-color:#aaccaa;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#emailForm legend {
+	padding: 0 10px 0 10px;
+}
+
+#emailForm p {
+	padding: 10px 0 5px 0;
+}
+
+#emailForm .label {
+	display: block;
+	border: none;
+	float: left;
+	width: 31.25%;			/* was 140px; */
+	margin-right: 2.232142857%;	/* was 10px; */
+	text-align: right;
+	background-color: #eefeee;
+	clear: left;
+}
+
+#emailForm img {
+	position:relative;
+	margin-left: 33.482142857%;			/* was 150px */
+	width: 33.482142857%;				/* was 150px */
+	margin-top: 10px;
+	margin-bottom: 5px;
+	border-style: solid;
+	border-color:#336600;
+	border-width:3px;
+}
+
+#emailForm button {
+	background-color: #cbd893;
+	border: none;
+	border:1px solid hsla(0, 0%, 24%, 0.5);
+	color: #444;
+	border-radius: 4px;
+	padding: 5px;
+	margin-bottom: 10px;
+	margin-left: 33.482142857%;			/* was 150px */
+	margin-top: 10px;
+	font-size: 1.0em;
+}
+
+#buttons {
+	margin-top: 15px;
+	margin-left: 30.24193548%;	/* was 150px; */
+	font-family: "Century Gothic", "Gill Sans", Arial, sans-serif;
+}
+
+input#send, input#cancel {
+	padding: 5px;
+	background-color: #cbd893;
+}
+
+#send:hover, #cancel:hover, #emailForm button:hover {
+	cursor: pointer;
+	color: #fff;
+	background-color: #336600;
+}
+
+input:focus {
+	background-color: #ffffcc;
+}
+
+textarea:focus {
+	background-color: #ffffcc;
+}
+
+#rqdflds {
+	padding: 25px 10px 0px 0px;
+	text-align: right;
+}
+
+/* SMALLER SCREENS (LAPTOP ETC.)
+---------------------------------------------- */
+
+@media handheld, only screen and (max-width: 900px) {
+	#box  {
+		width: 70%;
+		left: 10%;
+	}
+
+	input {
+		height: 1.5em;
+	}
+
+	input#cancel {
+		margin-left: 10%;
+	}
+}
+
+/* SMALLER SCREENS (MOBILES ETC.)
+---------------------------------------------- */
+
+@media handheld, only screen and (max-width: 570px) {
+	#emailForm .label {
+		width: 75%;
+		text-align: left;
+	}
+	
+	input {
+		height: 2em;
+	}
+
+	input, textarea {
+		margin-left: 4%;
+	}
+	#emailForm img {
+		display: block;
+		margin-left:auto;
+		margin-right: auto;
+		width: 50%;
+	}
+}
