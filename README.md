@@ -1,4 +1,4 @@
-# Travels-on-Git
+# Travels
 Travels with Paul
 Photos of some the places I have been luckily enough to have traveled to. 
 www.travelswithpaul.co.uk 
