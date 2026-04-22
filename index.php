@@ -13,7 +13,7 @@ $imageDir = $row1["iDir"];
 $thumbDir = $row1["tDir"];
 $bckgrnd  = $row1["iName"];
 
-include ('include/checkmail.php');			// Check to see if any mail or comments have sent.
+include ('include/checkmail.php');			// Check to see if any mail or comments have been sent.
 include ('include/header.html');			// Includes page header details to "wrapper".
 include ('include/navbar.php');				// Build the navbar from details collected in the index class.
 
